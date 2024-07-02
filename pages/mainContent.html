@@ -1,0 +1,186 @@
+<!-- main content -->
+<div class="container-fluid bg-light" id="showQuotes">
+    <div class="container">
+      <div class="row p-4 d-flex justify-content-around flex-wrap" id="itemCardContainer">
+      </div>
+      <!-- <div id="example">Hello <span style="display:none;">Hidden</span> World!</div> -->
+    </div>
+</div>
+
+<div class="container-fluid bg-light" id="createQuote">
+    <div class="heading container">
+        <h1 id="createQuoteHeading">Add Quote</h1>
+    </div>
+    <form id="addQuoteForm">
+    <div class="multipleAccordions mt-3">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                 <strong>Vehicle Details</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <!-- <form id="filter-group1"> -->
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="regNo">Registration No.</label>
+                            <input type="text" class="form-control" id="regNo" placeholder="Enter Registration No." name="regNumber"/>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="chasisNo">Chasis Number</label>
+                            <input type="text" class="form-control" id="chasisNo" placeholder="Enter Chasis Number" name="ChasisNumber"/>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="color">Color</label>
+                            <input type="text" class="form-control" id="color" placeholder="Enter Color" name="color"/>
+                          </div>
+                        </div>
+            
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="modelYear">Model Year</label>
+                            <select class="form-control" id="modelYear" name="modelYear">
+                              <!-- <option>Select Model Year</option> -->
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="manufacturer">Manufacturer</label>
+                            <select class="form-control" id="manufacturer" name="manufacturer">
+                              <!-- <option>Select Manufacturer</option> -->
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="model">Model</label>
+                            <select class="form-control" id="model" name="model">
+                              <!-- <option>Select Model</option> -->
+                            </select>
+                          </div>
+                        </div>
+            
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="engine">Engine</label>
+                            <select class="form-control" id="engine" name="engine">
+                              <!-- <option>Select Engine</option> -->
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label>Sunroof</label><br />
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="sunroof" id="sunroofAvailable" value="yes" />
+                              <label class="form-check-label" for="sunroofAvailable">Available</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="sunroof" id="sunroofNotAvailable" value="no" />
+                              <label class="form-check-label" for="sunroofNotAvailable">Not Available</label>
+                            </div>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label>Suspension</label><br />
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="suspension" id="suspensionHard" value="hard" />
+                              <label class="form-check-label" for="suspensionHard">Hard</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="suspension" id="suspensionSoft" value="soft" />
+                              <label class="form-check-label" for="suspensionSoft">Soft</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="suspension" id="suspensionSmooth" value="smooth" />
+                              <label class="form-check-label" for="suspensionSmooth">Smooth</label>
+                            </div>
+                          </div>
+                        </div>
+                      <!-- </form> -->
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <strong>Accident Details</strong>
+                </button>
+              </h2>
+
+              
+
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+
+                    <button type="button" class="btn btn-primary text-white" id="violationBtn" name="trafficViolation">Add New Violation</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <strong>Driver Details</strong>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                        <!-- <form id="filter-group2"> -->
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="driverName">Driver Name</label>
+                            <input type="text" class="form-control" id="driverName" placeholder="Enter Driver Name" name="name"/>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="driverAge">Driver Age</label>
+                            <input type="text" class="form-control" id="driverAge" placeholder="Enter Driver Age" name="age"/>
+                          </div>
+                        </div>
+            
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="driverEmail">Driver Email</label>
+                            <input type="email" class="form-control" id="driverEmail" placeholder="Enter Driver Email" name="email"/>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label>Gender</label><br />
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" id="male" value="m" />
+                              <label class="form-check-label" for="male">Male</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" id="female" value="f" />
+                              <label class="form-check-label" for="female">Female</label>
+                            </div>
+                          </div>
+                        </div>
+            
+                        <div class="form-group">
+                          <label for="addressLine1">Address Line 1</label>
+                          <input type="text" class="form-control" id="addressLine1" placeholder="Enter Address Line 1" name="address1"/>
+                        </div>
+            
+                        <div class="form-group">
+                          <label for="addressLine2">Address Line 2 <span class="text-muted">(Optional)</span></label>
+                          <input type="text" class="form-control" id="addressLine2" placeholder="Enter Address Line 2" name="address2"/>
+                        </div>
+            
+                        <div class="form-row">
+                          <div class="form-group col-md-4">
+                            <label for="state">State</label>
+                            <input type="text" class="form-control" id="state" placeholder="Enter State" name="state"/>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter City" name="city"/>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="pincode">Pincode</label>
+                            <input type="text" class="form-control" id="pincode" placeholder="Enter Pincode" name="pincode"/>
+                          </div>
+                        </div>
+                      <!-- </form> -->
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <button type="button" class="btn btn-primary mt-3 mb-3" id="saveQuoteBtn">Save Quote</button>
+</form>
+</div>
